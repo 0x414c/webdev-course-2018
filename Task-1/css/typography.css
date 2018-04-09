@@ -1,0 +1,293 @@
+/* Typography */
+
+
+/* Configuration */
+:root {
+  /* --font-family-sans: 'Fira Sans', sans-serif; */
+  --font-family-sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-sans-condensed: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-serif: 'IBM Plex Serif', 'Georgia', Times, serif;
+  /* --font-family-monospace: 'Fira Sans Mono', monospace; */
+  --font-family-monospace: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+
+  --font-text: var(--font-family-serif);
+  --font-headings: var(--font-family-sans-condensed);
+  --font-ui: var(--font-family-sans);
+  --font-code: var(--font-family-monospace);
+
+  --font-weight-inactive: 500;
+  --font-weight-active: 800;
+
+  --base-line-height: 1.414;
+
+  --article-paragraph-indent: 1.618rem;
+}
+
+
+/* HTML */
+html {
+  font-family: var(--font-ui);
+  font-feature-settings: 'kern',
+    'liga', 'clig',
+    'calt';
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  /* font-weight: 500; */
+  text-rendering: optimizeLegibility;
+}
+
+
+/* Anchor */
+a {
+  font-weight: var(--font-weight-inactive);
+}
+
+
+a._active {
+  font-weight: var(--font-weight-active);
+}
+
+
+/* Abbreviation */
+abbr {
+  font-feature-settings: 'kern',
+    'lnum', 'pnum',
+    'smcp';
+  font-kerning: normal;
+  font-variant-caps: small-caps;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+
+abbr[title] {
+  text-decoration-style: double;
+}
+
+
+/* Form */
+form fieldset legend {
+  font-weight: bolder;
+}
+
+
+/* Heading */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  font-feature-settings: 'kern',
+    'liga', 'clig', 'dlig',
+    'calt', 'salt',
+    'lnum', 'pnum',
+    'swsh';
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-variant-numeric: lining-nums proportional-nums;
+  margin: 0;
+}
+
+
+h1 {
+  /* font-size: 2.986rem; */
+  font-size: 2.827rem;
+}
+
+
+h2 {
+  /* font-size: 2.488rem; */
+  font-size: 2.249rem;
+}
+
+
+h3 {
+  /* font-size: 2.074rem; */
+  font-size: 1.999rem;
+}
+
+
+h4 {
+  /* font-size: 1.728rem; */
+  font-size: 1.591rem;
+}
+
+
+h5 {
+  /* font-size: 1.44rem; */
+  font-size: 1.414rem;
+}
+
+
+h6 {
+  /* font-size: 1.2rem; */
+  font-size: 1.125rem;
+}
+
+
+/* Paragraph */
+p {
+  font-feature-settings: 'kern',
+    'liga', 'clig', 'dlig',
+    'calt',
+    'onum', 'pnum';
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  hyphens: auto;
+  line-height: var(--base-line-height);
+  margin: 0;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+
+/* Article */
+article section {
+  font-family: var(--font-text);
+}
+
+
+article section + section {
+  margin-top: calc(3rem * var(--base-line-height));
+}
+
+
+article section p:first-of-type::first-letter {
+  font-weight: bolder;
+}
+
+
+article p:last-of-type,
+article section p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+article section p + p {
+  text-indent: var(--article-paragraph-indent);
+}
+
+
+article h1,
+section h1 {
+  margin-bottom: calc(2rem * var(--base-line-height));
+}
+
+
+article h2,
+section h2 {
+  margin-bottom: calc(1rem * var(--base-line-height));
+}
+
+
+article h3,
+section h3 {
+  margin-bottom: calc(1rem * var(--base-line-height));
+}
+
+
+article h4,
+section h4 {
+  margin-bottom: calc(1rem * var(--base-line-height));
+}
+
+
+article h5,
+section h5 {
+  margin-bottom: calc(1rem * var(--base-line-height));
+}
+
+
+article h6,
+section h6 {
+  margin-bottom: calc(1rem * var(--base-line-height));
+}
+
+
+article p,
+section p {
+  margin-bottom: calc(1rem * var(--base-line-height));
+}
+
+
+/* Code */
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--font-code);
+  font-feature-settings: 'kern', 'lnum', 'tnum';
+  font-kerning: normal;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+
+/* Small */
+small {
+  /* font-size: 0.833rem; */
+  font-size: 0.796rem;
+}
+
+
+/* Subscript */
+sub {
+  font-feature-settings: 'kern', 'subs';
+  font-kerning: normal;
+  /* font-size: 0.694rem; */
+  font-size: 0.707rem;
+  font-variant-position: sub;
+}
+
+
+/* Superscript */
+sup {
+  font-feature-settings: 'kern', 'sups';
+  font-kerning: normal;
+  font-size: 0.694rem;
+  font-variant-position: super;
+}
+
+
+/* Table */
+table caption {
+  font-feature-settings: 'kern',
+    'liga', 'clig', 'dlig',
+    'calt', 'salt',
+    'lnum', 'pnum';
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+table td {
+  font-feature-settings: 'kern',
+  'liga', 'clig', 'dlig',
+  'calt',
+  'lnum', 'pnum';
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+
+/* Fraction */
+.frac {
+  font-feature-settings: 'kern',
+  'liga', 'clig', 'dlig',
+  'calt',
+  'lnum', 'pnum',
+  'frac', 'ordn';
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-variant-numeric: lining-nums tabular-nums diagonal-fractions ordinal;
+}
+
+
+/* Ordinal */
+.ordn {
+  font-feature-settings: 'kern',
+  'liga', 'clig', 'dlig',
+  'calt',
+  'lnum', 'pnum', 'ordn';
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-variant-numeric: lining-nums tabular-nums ordinal;
+}
