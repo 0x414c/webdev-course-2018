@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Dolor Sit</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div class="content-container-grid">
+      <div class="header-cell">
+        <header class="header">
+          <div class="-logo">
+            <a class="link" href="./index.html">
+              <img src="./images/logo.png" alt="Logo">
+            </a>
+          </div>
+
+          <nav class="-navigation">
+            <ul>
+              <li>
+                <a href="./index.html">About</a>
+              </li>
+
+              <li>
+                <a href="./article.html">Article</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <div class="navigation-cell">
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="./index.html">About</a>
+            </li>
+
+            <li>
+              <a href="./article.html">Article</a>
+            </li>
+
+            <li>
+              <a href="./gallery.html">Gallery</a>
+            </li>
+
+            <li>
+              <a class="_active" href="./items">Items</a>
+            </li>
+
+            <li>
+              <a href="./index.html">Lorem Ipsum</a>
+            </li>
+
+            <li>
+              <a href="./index.html">Dolor sit</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-cell">
+        <aside class="sidebar">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora accusamus culpa veritatis doloremque libero nemo ipsam unde, labore voluptate voluptates veniam nobis quo deleniti excepturi cum laboriosam praesentium nihil.</p>
+        </aside>
+      </div>
+
+      <div class="content-cell">
+        <main class="content">
+          <section>
+            <header>
+              <h1>Items</h1>
+            </header>
+
+            <div class="items-grid">
+              <% for (const item of items) { %>
+                <article class="item-card">
+                  <figure class="-image">
+                    <img src="./images/300.png" alt="<%= item.name %>">
+                  </figure>
+
+                  <header class="-title">
+                    <a href="./items/<%= item.id %>">
+                      <h2><%= item.name %></h2>
+                    </a>
+                  </header>
+
+                  <p class="-description"><%= item.shortDescription %></p>
+                </article>
+              <% } %>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer-cell">
+        <footer class="footer">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla beatae obcaecati, cumque perferendis, ducimus laudantium, ea quam aperiam quibusdam animi aut amet ab cum eligendi magnam deserunt tempora mollitia unde!</p>
+
+          <p><a href="./feedback.html">Feedback</a></p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

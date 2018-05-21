@@ -1,0 +1,133 @@
+/* Layout */
+:root {
+  --side-content-width: 200px;
+
+  --item-grid-gap: 22px;
+}
+
+
+/* Index */
+.index-container-grid {
+  display: grid;
+}
+
+
+/* Content */
+.content-container-grid {
+  display: grid;
+}
+
+
+/* Header */
+.header-cell {
+  grid-area: header-cell;
+}
+
+
+/* Navigation */
+.navigation-cell {
+  grid-area: navigation-cell;
+}
+
+
+/* Sidebar */
+.sidebar-cell {
+  grid-area: sidebar-cell;
+}
+
+
+/* Content */
+.content-cell {
+  grid-area: content-cell;
+}
+
+
+/* Footer */
+.footer-cell {
+  grid-area: footer-cell;
+}
+
+
+/* Empty */
+.empty-cell {
+  grid-area: empty-cell;
+}
+
+
+/* Items */
+.items-grid {
+  display: grid;
+  grid-gap: var(--item-grid-gap);
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+
+
+/* Mobile: [0px; 600px] */
+@media (max-width: 600px) {
+  .index-container-grid {
+    grid-template-areas:
+      "header-cell"
+      "navigation-cell"
+      "content-cell"
+      "footer-cell";
+    grid-template-rows: repeat(5, auto);
+  }
+
+
+  .content-container-grid {
+    grid-template-areas:
+      "header-cell"
+      "navigation-cell"
+      "content-cell"
+      "sidebar-cell"
+      "footer-cell";
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+
+/* Desktop: [601px; 1200px] */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .index-container-grid {
+    grid-template-areas:
+      "header-cell"
+      "navigation-cell"
+      "content-cell"
+      "footer-cell";
+    grid-template-rows: repeat(4, auto);
+  }
+
+
+  .content-container-grid {
+    grid-template-areas:
+      "header-cell header-cell header-cell"
+      "navigation-cell navigation-cell navigation-cell"
+      "sidebar-cell content-cell content-cell"
+      "footer-cell footer-cell footer-cell";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: var(--side-content-width) 1fr;
+  }
+}
+
+
+/* Widescreen: [1201px; +Infinity) */
+@media (min-width: 1201px) {
+  .index-container-grid {
+    grid-template-areas:
+      "header-cell header-cell"
+      "navigation-cell content-cell"
+      "footer-cell footer-cell";
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: var(--side-content-width) 1fr;
+  }
+
+
+  .content-container-grid {
+    grid-template-areas:
+      "header-cell header-cell header-cell"
+      "navigation-cell content-cell sidebar-cell"
+      "footer-cell footer-cell footer-cell";
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: var(--side-content-width) 1fr var(--side-content-width);
+  }
+}

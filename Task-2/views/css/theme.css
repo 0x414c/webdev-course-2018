@@ -1,0 +1,120 @@
+/* Theme */
+
+
+/* Configuration */
+:root {
+  --base-background: #FAFAFA;
+  --base-background-shaded: #ECEFF1;
+  --base-foreground: #212121;
+
+  --header-background-1: #00BCD4;
+  --header-background-2: #673AB7;
+  --header-foreground: #ECEFF1;
+
+  --divider-background: #263238;
+  --divider-thickness: 2px;
+
+  --footer-background-1: #455A64;
+  --footer-background-2: #37474F;
+  --footer-foreground: #FAFAFA;
+
+  --card-border-radius: 11px;
+}
+
+
+/* Global */
+body {
+  background: var(--base-background);
+  color: var(--base-foreground);
+}
+
+
+/* Anchor */
+a {
+  color: var(--base-foreground);
+}
+
+
+/* Form */
+form fieldset {
+  background: linear-gradient(0deg, var(--base-background), var(--base-background-shaded));
+  border: var(--divider-thickness) dotted;
+  border-radius: var(--card-border-radius);
+}
+
+
+/* Header */
+.header {
+  background-image: linear-gradient(160deg, var(--header-background-1), var(--header-background-2));
+}
+
+
+.header .-navigation ul li a {
+  color: var(--header-foreground);
+}
+
+
+/* Navigation */
+.navigation {
+  background: linear-gradient(0deg, var(--base-background), var(--base-background-shaded));
+  border-color: var(--divider-background);
+  border-bottom: var(--divider-thickness) solid;
+}
+
+
+/* Sidebar */
+.sidebar {
+  border-color: var(--divider-background);
+  background: linear-gradient(0deg, var(--base-background), var(--base-background-shaded));
+}
+
+
+/* Footer */
+.footer {
+  background: linear-gradient(0deg, var(--footer-background-1), var(--footer-background-2));
+  color: var(--footer-foreground);
+}
+
+
+.footer a {
+  color: var(--footer-foreground);
+}
+
+
+/* Item card */
+.item-card {
+  background: linear-gradient(0deg, var(--base-background), var(--base-background-shaded));
+  border: var(--divider-thickness) dotted;
+  border-radius: var(--card-border-radius);
+}
+
+
+/* Mobile: [0px; 600px] */
+@media (max-width: 600px) {
+  .sidebar {
+    border-top: var(--divider-thickness) dotted;
+  }
+}
+
+
+/* Desktop: [601px; 1200px] */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .sidebar {
+    background: linear-gradient(0deg, var(--base-background), var(--base-background-shaded));
+    border-right: var(--divider-thickness) dotted;
+  }
+}
+
+
+/* Widescreen: [1201px; +Infinity) */
+@media (min-width: 1201px) {
+  .navigation {
+    border-bottom: none;
+    border-right: var(--divider-thickness) dotted;
+  }
+
+
+  .sidebar {
+    border-left: var(--divider-thickness) dotted;
+  }
+}

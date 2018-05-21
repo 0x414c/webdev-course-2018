@@ -1,0 +1,23 @@
+{
+  "name": "task-2",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "@ibm/plex": "^1.0.1",
+    "ejs": "^2.6.1",
+    "koa": "^2.5.1",
+    "koa-body": "^2.5.0",
+    "koa-logger": "^3.2.0",
+    "koa-route": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "koa-views": "^6.1.4",
+    "normalize.css": "^8.0.0",
+    "orientjs": "^2.2.10"
+  },
+  "devDependencies": {
+    "pesticide": "^1.3.1"
+  }
+}
